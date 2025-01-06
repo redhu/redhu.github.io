@@ -7,9 +7,9 @@ baseurl: ""
 url: "https://redhu.github.io"
 destination: ./_site
 encoding: UTF-8
-paginate: 5 # 每页显示的博文数量
+paginate: 10 # 每页显示的博文数量
 paginate_path: "/posts/page:num" # 分页路径
-google_analytics: G-xxx
+google_analytics: G-7WY1E9F2CE
 collections:
   posts:
     output: true
