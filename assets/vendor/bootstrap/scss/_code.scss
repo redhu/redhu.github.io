@@ -1,0 +1,58 @@
+// Inline code
+code {
+  @include font-size($code-font-size);
+  color: #f8f8f2; // 浅色文字
+  background-color: #2d2d2d; // 深色背景
+  word-wrap: break-word;
+  padding: 0.2em 0.4em; // 添加内边距
+  border-radius: 5px; // 圆角
+  font-family: 'Courier New', Courier, monospace; // 等宽字体
+
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
+}
+
+// User input typically entered via keyboard
+kbd {
+  padding: $kbd-padding-y $kbd-padding-x;
+  @include font-size($kbd-font-size);
+  color: $kbd-color;
+  background-color: $kbd-bg;
+  @include border-radius($border-radius-sm);
+  @include box-shadow($kbd-box-shadow);
+
+  kbd {
+    padding: 0;
+    @include font-size(100%);
+    font-weight: $nested-kbd-font-weight;
+    @include box-shadow(none);
+  }
+}
+
+// Blocks of code
+pre {
+  display: block;
+  @include font-size($code-font-size);
+  color: #f8f8f2; // 浅色文字
+  background-color: #2d2d2d; // 深色背景
+  padding: 1em; // 添加内边距
+  border-radius: 5px; // 圆角
+  overflow-x: auto; // 支持水平滚动
+  font-family: 'Courier New', Courier, monospace; // 等宽字体
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    @include font-size(inherit);
+    color: inherit;
+    background-color: transparent; // 避免嵌套时重复背景颜色
+    word-break: normal;
+  }
+}
+
+// Enable scrollable blocks of code
+.pre-scrollable {
+  max-height: $pre-scrollable-max-height;
+  overflow-y: scroll;
+}
