@@ -1,15 +1,15 @@
 # _config.yml
-author: "Hilalum"
-title: "Hilalum's blog"
-email: "dcyap0@icloud.com"
+author: "redhu"
+title: "redhu's blog"
+email: "gzhmj@foxmail.com"
 description: ""
 baseurl: ""
-url: "https://hilalum.github.io"
+url: "https://redhu.github.io"
 destination: ./_site
 encoding: UTF-8
 paginate: 5 # 每页显示的博文数量
 paginate_path: "/posts/page:num" # 分页路径
-google_analytics: G-QBK899EFL5
+google_analytics: G-xxx
 collections:
   posts:
     output: true
